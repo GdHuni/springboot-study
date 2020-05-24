@@ -90,7 +90,7 @@ public class DataSourceConfig {
     }
 
     @Bean(name = "mySqlJdbcTemplate")
-    *//*@Qualifier("master")*//*
+    @Qualifier("master")
     public JdbcTemplate mySqlJdbcTemplate(*//*@Qualifier("master")*//* DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }*/
