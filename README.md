@@ -1,0 +1,7 @@
+springboot+mybatis 配置动态多数据源
+
+0.yml文件中spring.datasource.url要改为spring.datasource.jdbc-url
+1.写config配置文件,加载yml文件中的数据源。并且将所有的数据源加载到DynamicRoutingDataSource中设置，然后使用该数据源。后续通过匹配到的key走数据源
+2.写切面类DynamicDataSourceAspect 拦截mapper的请求。
+3.写数据源处理类DataSourceHolder 用于指定查询那个数据源
+4.写数据源查询类 指定sql查询那个数据源DynamicRoutingDataSource extends AbstractRoutingDataSource 在访问数据库时会调用该类的 determineCurrentLookupKey() 方法获取数据库实例的 key

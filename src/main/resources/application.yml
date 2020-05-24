@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    master:
+      jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave:
+      jdbc-url: jdbc:mysql://localhost:3306/shop?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8081
+
+#mybatis的相关配置
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*Mapper.xml
+  #实体类返回路径
+  type-aliases-package: com.example.demo.enity.UserVo
+  configuration:
+      #sql语句输出
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
