@@ -12,7 +12,9 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 8081
-
+  #指定项目访问路径前缀
+  servlet:
+    context-path: /huni
 #mybatis的相关配置
 mybatis:
   #mapper配置文件
