@@ -14,5 +14,7 @@ public interface UserMapper {
      * 获取用户信息
      * @return
      */
+    //@DataSource()
+    // 使用该注解 走的自定义数据源
     List<UserVo> getTestInfo();
 }

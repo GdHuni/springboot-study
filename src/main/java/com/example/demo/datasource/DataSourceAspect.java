@@ -30,6 +30,12 @@ public class DataSourceAspect {
         DataSourceHolder.useDataSource();
     }
 
+    /* // 使用自定义数据源的话 需要在mapper层使用注解来使用该数据源 @DataSource
+    @Before("@annotation(ds)")
+    public void initDataSource(DataSource ds){
+        DataSourceHolder.useDataSource();
+    }*/
+
     /**
      * 清空本地线程中的数据源key
      * @param point
