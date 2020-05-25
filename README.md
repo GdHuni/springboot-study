@@ -1,4 +1,13 @@
 springboot+mybatis 配置动态多数据源
+-- 建表
+CREATE TABLE `USER_TEST` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+ 
+  `NAME` varchar(10) COLLATE utf8_unicode_ci NOT NULL COMMENT '姓名',
+  `AGE` INT(11) COLLATE utf8_unicode_ci NOT NULL COMMENT '年龄',
+  `UPDATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后更新时间',
+  PRIMARY KEY (`ID`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='用户测试表';
 
 0.yml文件中spring.datasource.url要改为spring.datasource.jdbc-url
 1.写config配置文件,加载yml文件中的数据源。并且将所有的数据源加载到DynamicRoutingDataSource中设置，然后使用该数据源。后续通过匹配到的key走数据源
