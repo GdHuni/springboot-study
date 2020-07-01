@@ -32,15 +32,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
+		<!-- 单元测试 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
+			<!--<exclusions>
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>-->
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.jupiter</groupId>
+					<artifactId>junit-jupiter-api</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -55,6 +61,7 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+
 		<!-- mysql -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -72,6 +79,7 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.0.0</version>
 		</dependency>
+
 		<!-- mybatis pagehelper 分页查询插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -91,7 +99,7 @@
             <scope>provided</scope>
         </dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop -->
+		<!--切面 https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
@@ -114,7 +122,13 @@
 			<artifactId>flink-clients_2.10</artifactId>
 			<version>1.2.0</version>
 		</dependency>
-    </dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>

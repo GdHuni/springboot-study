@@ -19,3 +19,12 @@ CREATE TABLE `USER_TEST` (
 2.写切面类DynamicDataSourceAspect 拦截mapper的请求。  
 3.写数据源处理类DataSourceHolder 用于指定查询那个数据源   
 4.写数据源查询类 指定sql查询那个数据源DynamicRoutingDataSource extends AbstractRoutingDataSource 在访问数据库时会调用该类的 determineCurrentLookupKey() 方法获取数据库实例的 key
+~~~~
+
+~~~~
+新增flinkdemo代码
+~~~~
+
+~~~~
+单元测试超类：com.example.demo.ApplicationTests
+~~~~
