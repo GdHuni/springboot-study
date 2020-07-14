@@ -21,14 +21,17 @@ CREATE TABLE `USER_TEST` (
 4.写数据源查询类 指定sql查询那个数据源DynamicRoutingDataSource extends AbstractRoutingDataSource 在访问数据库时会调用该类的 determineCurrentLookupKey() 方法获取数据库实例的 key
 ~~~~
 
+#### flink
 ~~~~
 新增flinkdemo代码
 ~~~~
 
+#### 单元测试
 ~~~~
 单元测试超类：com.example.demo.ApplicationTests
 ~~~~
 
+#### log4j日志框架
 ~~~~
 配置log4j2日志输出
 1.		pom.xml加入log4j2，并同时把spring boot默认的logging去掉
