@@ -29,6 +29,7 @@ CREATE TABLE `USER_TEST` (
 #### 单元测试
 ~~~~
 单元测试超类：com.example.demo.ApplicationTests
+https://juejin.im/post/5d62cc3ee51d45620b21c3e9#heading-2
 ~~~~
 
 #### log4j日志框架
