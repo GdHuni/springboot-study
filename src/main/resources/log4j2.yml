@@ -8,7 +8,7 @@ Configuration:
     - name: log.level.console
       value: info
     - name: log.path
-      value: F:\Program Files\IdeaProjects\mgspringboot\src\main\resources\log4j2s
+      value: D:\A_E\IdeaProjects\mgspringboot\src\main\resources\log4j2s
     - name: project.name
       value: springboot-study
  

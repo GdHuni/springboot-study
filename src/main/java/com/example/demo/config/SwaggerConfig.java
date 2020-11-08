@@ -1,7 +1,5 @@
 package com.example.demo.config;
 
-import io.swagger.annotations.Api;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -14,24 +12,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@ConditionalOnProperty(prefix = "mconfig", name = "swagger-ui-open", havingValue = "true")
 public class SwaggerConfig {
-
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
+                .apis(RequestHandlerSelectors.basePackage("com.example.demo.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("SeClover数据平台开放接口")
+                .title("huni数据平台开放接口")
                 .description("Rest API接口")
-                .termsOfServiceUrl("https://blog.csdn.net/youbitch1")
                 .version("1.0")
                 .build();
     }
