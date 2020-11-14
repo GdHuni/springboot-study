@@ -111,3 +111,11 @@ https://juejin.im/post/5d62cc3ee51d45620b21c3e9#heading-2
 4.org.apache.logging.log4j.LogManager.getLogger;  
     private Logger logger = getLogger();
 ~~~~
+
+#### swagger2及UI增强使用
+~~~~
+1.配置SwaggerConfig（详见文件）
+2.如果使用的原始swagger2需要在启动类加上@EnableSwagger2 否则报错
+3.给类，接口，参数，实体类添加解释说明
+4.通过http://ip+port/项目名/doc.html# 访问 http://localhost:8081/huni/doc.html#
+~~~~
