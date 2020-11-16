@@ -1,4 +1,4 @@
-package com.example.demo.flink;
+package com.example.demo.bigdata.flink;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
