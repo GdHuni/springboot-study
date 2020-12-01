@@ -24,3 +24,19 @@ mybatis:
   configuration:
       #sql语句输出
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#redis配置
+redis:
+  nodes: 172.16.5.29:7001,172.16.5.29:7002,172.16.5.29:7003,172.16.5.29:7004,172.16.5.29:7005,172.16.5.29:7006
+  timeout: 2000ms
+
+wechat:
+  ## 接口配置token 微信用户保存链接 公众号id 公众号secret 消息模板id
+  token: gh_3924b366693e
+  saveUrl: http://172.16.6.229/huni/weChart/save
+  APPID: wxf22768ddea244b5b
+  appSecret: 26d3511982899c773949f47770f9ab71
+  templateId: CXJdy12a2ItCLb304guIhVzfcCvubb3JjkaLszzQbj8
+  ##乐聊发送信息服务号
+  im_serve_number: servenumber000043
+  monitUrl: http://172.16.6.229
