@@ -1,4 +1,4 @@
-package com.example.demo.zookepper.distributelock;
+package com.example.demo.bigdata.zookepper.distributelock;
 
 import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;

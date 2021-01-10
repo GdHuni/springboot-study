@@ -1,4 +1,4 @@
-package com.example.demo.zookepper.distributelock;
+package com.example.demo.bigdata.zookepper.distributelock;
 
 /**
 * @功能描述: zk实现分布式锁
