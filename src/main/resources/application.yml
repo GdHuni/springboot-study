@@ -10,6 +10,19 @@ spring:
       username: root
       password: root
       driver-class-name: com.mysql.cj.jdbc.Driver
+#  mvc:
+#    view:
+#      prefix: /templates/
+#      suffix: .ftl
+  ##应用freemarker模板
+  freemarker:
+    settings:
+      classic_compatible: true #处理空值
+      datetime_format: yyy-MM-dd HH:mm
+      number_format: 0.##
+    suffix: .ftl
+    template-loader-path:
+      - classpath:/templates/
 server:
   port: 8081
   #指定项目访问路径前缀
@@ -27,16 +40,16 @@ mybatis:
 
 #redis配置
 redis:
-  nodes: 172.16.5.29:7001,172.16.5.29:7002,172.16.5.29:7003,172.16.5.29:7004,172.16.5.29:7005,172.16.5.29:7006
+  nodes: 192.168.111.121:6379,192.168.111.121:6381,192.168.111.122:6379,192.168.111.122:6381,192.168.111.123:6379,192.168.111.123:6381
   timeout: 2000ms
 
-wechat:
-  ## 接口配置token 微信用户保存链接 公众号id 公众号secret 消息模板id
-  token: gh_3924b366693e
-  saveUrl: http://172.16.6.229/huni/weChart/save
-  APPID: wxf22768ddea244b5b
-  appSecret: 26d3511982899c773949f47770f9ab71
-  templateId: CXJdy12a2ItCLb304guIhVzfcCvubb3JjkaLszzQbj8
-  ##乐聊发送信息服务号
-  im_serve_number: servenumber000043
-  monitUrl: http://172.16.6.229
+#wechat:
+#  ## 接口配置token 微信用户保存链接 公众号id 公众号secret 消息模板id
+#  token: gh_3924b366693e
+#  saveUrl: http://172.16.6.229/huni/weChart/save
+#  APPID: wxf22768ddea244b5b
+#  appSecret: 26d3511982899c773949f47770f9ab71
+#  templateId: CXJdy12a2ItCLb304guIhVzfcCvubb3JjkaLszzQbj8
+#  ##乐聊发送信息服务号
+#  im_serve_number: servenumber000043
+#  monitUrl: http://172.16.6.229
